@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm i node-sass@4.14.1`
+
+### `npm i --save react-router-dom reactstrap`
+
 ### `yarn start`
 
 Runs the app in the development mode.\
