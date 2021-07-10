@@ -8,7 +8,7 @@ Banner.propTypes = {
 };
 
 Banner.defaultProps = {
-  title: 'Phan Duy Tam',
+  title: '',
   backgroundUrl: '',
 }
 

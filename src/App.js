@@ -2,11 +2,10 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Route, Switch, Redirect, Link } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header';
-import Banner from './components/Banner';
 import NotFound from './components/NotFound';
 
 
-// const Header = React.lazy(() => import('./components/Header'))
+const Photo = React.lazy(() => import('./features/Photo'))
 
 function App() {
   return (
@@ -14,13 +13,13 @@ function App() {
       <Suspense fallback={<div>Loading.....</div>}>
         <BrowserRouter>
           <Header/>
-          <Banner/>
 
           <Switch>
-            <Redirect exact from="/" to="/photos"/>
+            <Redirect exact from="/" to="/photos" />
 
-            <Route path="/photos" component={NotFound}/>
-            <Route  component={NotFound}/>
+            <Route path="/photos" component={Photo} />
+            {/* <Route path="/sign-in" component={SignIn} /> */}
+            <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
       </Suspense>
